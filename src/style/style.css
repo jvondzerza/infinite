@@ -1,0 +1,21 @@
+:root {
+  --clr-black: yellow;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article img {
+  width: 100px;
+}
+
+.home {
+  --clr-black: blue;
+  background-color: #303030;
+}
+.home > * {
+  color: var(--clr-black);
+}/*# sourceMappingURL=style.css.map */
