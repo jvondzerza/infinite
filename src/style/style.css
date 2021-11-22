@@ -6,4 +6,13 @@
 
 article img {
   width: 100px;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */
