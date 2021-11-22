@@ -8,4 +8,10 @@ article img {
   width: 100px;
 }
 
+button {
+  background-color: white;
+  width: 6rem;
+  color: black;
+}
+
 /*# sourceMappingURL=style.css.map */
