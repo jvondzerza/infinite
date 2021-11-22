@@ -1,11 +1,1 @@
 @use '../../style/abstracts/' as *;
-
-.home {
-    --clr-black: blue;
-
-    background-color: $clr-black;
-
-    & > * {
-       color: var(--clr-black);
-    }
-}
