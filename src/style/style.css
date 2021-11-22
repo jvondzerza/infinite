@@ -12,10 +12,16 @@ article img {
   width: 100px;
 }
 
+button {
+  background-color: blue;
+}
+
 .home {
   --clr-black: blue;
   background-color: #303030;
 }
 .home > * {
   color: var(--clr-black);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
