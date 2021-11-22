@@ -1,4 +1,5 @@
 import { Article } from "../../components";
+import { Image } from "../../components";
 import img from '../../assets/standing.gif';
 
 function HomePage(props) {

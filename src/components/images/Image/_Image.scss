@@ -1,14 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-article img {
-  width: 100px;
-}
-
-.image {
+.image{
   position: absolute;
   top: 5%;
   object-fit: cover;
@@ -19,7 +9,7 @@ article img {
   left: 5%;
 }
 
-.imgRight {
+.imgRight{
   right: 5%;
 }
 
@@ -33,7 +23,7 @@ article img {
   width: 200px;
 }
 
-.imgMedium {
+.imgMedium{
   height: 400px;
   width: 400px;
 }
@@ -42,5 +32,3 @@ article img {
   height: 600px;
   width: 600px;
 }
-
-/*# sourceMappingURL=style.css.map */
