@@ -1,3 +1,4 @@
 import Text from './Text/Text';
+import Title from './Title/Title';
 
-export default Text;
+export { Title, Text };

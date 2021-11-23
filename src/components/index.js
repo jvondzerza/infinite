@@ -1,5 +1,5 @@
 import Article from './articles';
 import Text from './text'
+import Title from './text';
 
-export { Article };
-export { Text };
+export { Article, Title, Text };
