@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["base/_universal.scss","../components/articles/Article/_Article.scss","../components/buttons/RickRoll/_Button.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;;ACFA;EACI;;;ACFR;EAEE;EACA;EACA","file":"style.css"}
+{"version":3,"sources":["base/_universal.scss","style.scss","../components/articles/Article/_Article.scss","../components/buttons/RickRoll/_RickRollButton.scss"],"names":[],"mappings":"AAAA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;ACCJ;;ACHI;EACI,YAAA;ADMR;;AERA;EACI,WAAA;EACA,YAAA;EAEA,uBAAA;AFUJ","file":"style.css"}

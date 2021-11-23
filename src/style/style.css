@@ -9,9 +9,7 @@ article img {
 }
 
 button {
-  background-color: white;
   width: 6rem;
   color: black;
-}
-
-/*# sourceMappingURL=style.css.map */
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */
