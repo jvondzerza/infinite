@@ -1,5 +1,15 @@
 import Article from './articles';
-import Text from './text'
-import Title from './text';
+import { Text, Title } from './text';
+import { RickRollButton } from './buttons';
 
-export { Article, Title, Text };
+export { Article };
+
+/*************
+ * TEXT *
+**************/
+export { Title, Text };
+
+/*************
+ * BUTTONS*
+**************/
+export { RickRollButton };
