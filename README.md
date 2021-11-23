@@ -1,3 +1,53 @@
+#RESOURCES
+- font api - https://developers.google.com/fonts/docs/developer_api
+- image api - https://unsplash.com/developers
+- color api - http://www.thecolorapi.com/
+- jeff goldblum quote api lol - https://jeffsum.com/
+- https://www.npmjs.com/package/complementary-colors
+
+#STRUCTURE
+- get everyones configurations working
+- configure sth to format code
+- follow import protocol in index files
+
+#APPROACH
+- static stuff -> classes
+- dynamic stuff -> methods
+
+#MUST HAVES
+##landing page ->
+    - explain concept
+    - nav to github profiles and project repo
+    - instructions
+    - scrolls to project
+##random pages ->
+    - nav to github profiles and project repo
+    - header ->
+      - title
+    - section ->
+      - background
+      - text
+      - image(s)
+
+#NICE TO HAVES
+- component animation(s)
+
+#TODO
+- create page templates based off chosen awwwards pages
+- get image and image color code data for testing with the complementary-colors tool for creating page schemes
+
+#COMPONENTS SO FAR
+- text
+- image
+- title
+- link
+- button
+
+#WEBSITES WE'RE STEALING TEMPLATES FROM
+- https://hugonicaise.fr/
+- https://flayks.com/
+- https://danielebuffa.me/work
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

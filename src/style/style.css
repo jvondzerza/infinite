@@ -11,10 +11,8 @@ article img {
 .image {
   position: absolute;
   top: 5%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .imgLeft {
@@ -64,4 +62,6 @@ button {
 .home {
   width: 100vw;
   height: 100vh;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
