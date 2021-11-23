@@ -8,21 +8,60 @@ article img {
   width: 100px;
 }
 
+.image {
+  position: absolute;
+  top: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.imgLeft {
+  left: 5%;
+}
+
+.imgRight {
+  right: 5%;
+}
+
+.imgCenter {
+  left: 45%;
+  margin-left: -150px;
+}
+
+.imgSmall {
+  height: 200px;
+  width: 200px;
+}
+
+.imgMedium {
+  height: 400px;
+  width: 400px;
+}
+
+.imgLarge {
+  height: 600px;
+  width: 600px;
+}
+
 button {
   width: 6rem;
   color: black;
   background-color: white;
+}
 
 .title {
   font-size: 3rem;
 }
 
-.home {
-  width: 100vw;
-  height: 100vh;
-
 .text {
   font-family: sans-serif;
   font-size: 22px;
   color: orangered;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */
