@@ -15,4 +15,9 @@ article img {
 .home {
   width: 100vw;
   height: 100vh;
+
+.text {
+  font-family: sans-serif;
+  font-size: 22px;
+  color: orangered;
 }/*# sourceMappingURL=style.css.map */
