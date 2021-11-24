@@ -1,21 +1,4 @@
-import Article from './articles';
-import Image from './images';
-import { Text, Title } from './text';
-import { RickRollButton } from './buttons';
+import { Article, Header, Main, Nav, Section } from './containers';
+import { Image, Link, Text, Title } from "./blocks";
 
-export { Article };
-
-/*************
- * IMAGES *
-**************/
-export { Image };
-
-/*************
- * TEXT *
-**************/
-export { Title, Text };
-
-/*************
- * BUTTONS*
-**************/
-export { RickRollButton };
+export { Article, Header, Main, Nav, Section, Image, Link, Text, Title };
