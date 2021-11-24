@@ -3,4 +3,9 @@ import Link from './Link/Link';
 import Text from './Text/Text';
 import Title from './Title/Title';
 
-export { Image, Text, Link, Title };
+export { 
+    Image,
+    Link,
+    Text,
+    Title 
+};
