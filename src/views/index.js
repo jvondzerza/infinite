@@ -1,5 +1,5 @@
-import HeaderPage from "./Header/Header";
+import HeaderSection from "./Header/Header";
 
-// Any page in your app is a "view"
-
-export default HeaderPage;
+export { 
+    HeaderSection 
+};
