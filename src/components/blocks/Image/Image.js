@@ -48,7 +48,7 @@ const Image = (props) => {
     return (
         //<img src={props.src} alt={props.alt} className={props.class} id={props.id}/>
         <div style={{display: "flex", flexDirection:"column"}}>
-            <img src={randImg.urls.raw} alt={randImg.description} className={props.class} id={props.id} style={{margin: "5% 5%", objectFit: "cover", objectPosition: "center", height: "400px", width: "400px"}}/>
+            <img src={randImg.urls.raw} alt={randImg.description} className={props.class} id={props.id}/>
             <figcaption>Image by {randImg.user.name}</figcaption>
             <div style={{width:"100%", height:"600px"}}>
                 <div style={{width: "10%", float: "left"}}>
