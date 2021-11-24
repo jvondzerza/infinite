@@ -1,4 +1,4 @@
-import { Article } from "../../components";
+import {Header, Section} from '../../components';
 import img from '../../assets/standing.gif';
 
 function HomePage(props) {
@@ -6,7 +6,8 @@ function HomePage(props) {
 
     return (
         <section className="home">
-            <Article src={img} />
+            <Header />
+            <Section />
         </section>
     )
 }
