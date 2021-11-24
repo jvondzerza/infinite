@@ -1,8 +1,8 @@
-import HomePage from "./views";
+import HeaderPage from "./views";
 
 function App() {
     return (
-        <HomePage />
+        <HeaderPage />
     )
 }
 

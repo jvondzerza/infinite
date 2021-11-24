@@ -1,5 +1,5 @@
-import HomePage from "./HomePage/HomePage";
+import HeaderPage from "./Header/Header";
 
 // Any page in your app is a "view"
 
-export default HomePage;
+export default HeaderPage;
