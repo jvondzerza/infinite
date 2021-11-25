@@ -1,49 +1,48 @@
-# RESOURCES
-- font api - https://developers.google.com/fonts/docs/developer_api
-- image api - https://unsplash.com/developers
-- color api - http://www.thecolorapi.com/
-- jeff goldblum quote api lol - https://jeffsum.com/
-- https://www.npmjs.com/package/complementary-colors
+# ToDo - 25/11/2021
+- [ ] Create Page templates
+  - [ ] Build Header Component
+  - [ ] Build Section Component
+  - [ ] Build NavBar Component
+  - [ ] Test Color function (Image Component)
 
-# STRUCTURE
-- get everyones configurations working
-- configure sth to format code
-- follow import protocol in index files
+# Resources
+- [Font API](https://developers.google.com/fonts/docs/developer_api)
+- [Image API](https://unsplash.com/developers)
+- [Color API](http://www.thecolorapi.com/)
+- [Jeff Goldblum Quote API](https://jeffsum.com/)
+- [Complementary Colors Package](https://www.npmjs.com/package/complementary-colors)
 
-# APPROACH
-- static stuff -> classes
-- dynamic stuff -> methods
+# Structure
+- Get everyones configurations working
+- Configure sth to format code
+- Follow import protocol in index files
 
-# MUST HAVES
-## landing page ->
-    - explain concept
-    - nav to github profiles and project repo
-    - instructions
-    - scrolls to project
-## random pages ->
-    - nav to github profiles and project repo
-    - header ->
-      - title
-    - section ->
-      - background
-      - text
-      - image(s)
+# Must Haves
+## Landing page
+    - Explain concept
+    - NavBar to github profiles and project repo
+    - Instructions
+    - Scrolls to project
+## Random pages
+    - Nav to github profiles and project repo
+    - Header ->
+        - Title
+    - Section ->
+        - Background
+        - Text
+        - Image(s)
 
-# NICE TO HAVES
-- component animation(s)
+# Nice to Haves
+- Component animation(s)
 
-# TODO
-[ ] create page templates based off chosen awwwards pages
-[ ] get image and image color code data for testing with the complementary-colors tool for creating page schemes
+# Components So Far
+- Text
+- Image
+- Title
+- Link
+- Button
 
-# COMPONENTS SO FAR
-- text
-- image
-- title
-- link
-- button
-
-# TEMPLATES FROM
+# Templates From
 - https://hugonicaise.fr/
 - https://flayks.com/
 - https://danielebuffa.me/work
@@ -64,57 +63,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
