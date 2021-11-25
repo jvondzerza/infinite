@@ -1,5 +1,5 @@
 import { Header, Main, Nav, Section } from './containers';
-import { Image, Link, Text, Title } from "./blocks";
+import { Image, Link, Text, Title, Svg } from "./blocks";
 
 export {
     Header, 
@@ -12,5 +12,6 @@ export {
     Image, 
     Link, 
     Text, 
-    Title 
+    Title,
+    Svg
 };

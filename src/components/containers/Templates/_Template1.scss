@@ -1,0 +1,25 @@
+.template1 {
+
+  .img {
+    position: relative;
+    width: 30VW;
+    height: 70VH;
+    margin-top: 10%;
+    margin-right: 5%;
+    float: right;
+  }
+  img {
+    min-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  h1 {
+    text-transform: uppercase;
+    max-width: 50%;
+    height: auto;
+    margin-top: 20%;
+    margin-right: 5%;
+    float: right;
+  }
+}

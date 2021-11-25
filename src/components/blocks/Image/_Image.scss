@@ -1,7 +1,13 @@
 .image{
-  margin-top: 5%;
+  display: flex;
   object-fit: cover;
   object-position: center;
+}
+
+.imgCaption {
+  position: absolute;
+  right: 11%;
+  top: 15%;
 }
 
 .imgLeft {
@@ -14,7 +20,7 @@
 }
 
 .imgCenter {
-  margin: 5% auto;
+  margin: auto;
 }
 
 .imgSmall {

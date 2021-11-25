@@ -1,14 +1,19 @@
-import { Image, Title } from '../../blocks';
+import { Image, Title, Svg } from '../../blocks';
+
+//shape options:
+// circle
+// square
+// triangle
+// parallelogram
+
 
 const Header = () => {
     return(
         <header>
-            Hello from the Header container component, I hold an Image block component: <br/>
-            <Image class={"image imgCenter imgMedium"} /><br/>
-            And a Title block component: <br/>
-            <Title content={'you are now a header title'}/>
+            Hello from the Header container component
         </header>
     )
 }
 
 export default Header;
+

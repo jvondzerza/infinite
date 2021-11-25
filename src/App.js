@@ -1,8 +1,11 @@
-import { HeaderSection } from "./views";
+import { HeaderSection, MainSection } from "./views";
 
 function App() {
     return (
-        <HeaderSection />
+        <div>
+            <HeaderSection />
+            <MainSection />
+        </div>
     )
 }
 

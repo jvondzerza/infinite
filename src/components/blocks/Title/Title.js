@@ -1,6 +1,6 @@
 const Title = (props) => {
     return (
-        <p id={props.id} className={"title"}>{props.content}</p>
+        <h1 id={props.id} className={"title"} style={{color: props.color}}>{props.content}</h1>
     )
 }
 
