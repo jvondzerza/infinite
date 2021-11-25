@@ -15,7 +15,7 @@ scheme.from_hue(imageHue)
 let colorsArray = scheme.colors();
 
 let imageInfo = {
-    url: randImg.urls.raw,
+    url: randImg.urls.small,
     description: randImg.description,
     credit: randImg.user.name,
     creditUrl: randImg.links.html
