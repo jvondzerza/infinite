@@ -3,8 +3,8 @@ import { Title, Text } from '../../blocks';
 const Header = () => {
     return(
         <header>
-            <Title id={"header_title"} content={"Agence créative à vos côtés"} />
-            <Text id={"header_text"} text={"Une équipe simple & funky, inspirée par les projets vertueux, animée par votre réussite."} />
+            <Title id={"header_title"} content={"Welcome to the Infinite Scroll"} />
+            <Text id={"header_text"} text={"Scroll down and explore our templates"} />
         </header>
     )
 }
