@@ -1,6 +1,6 @@
 const Link = (props) => {
-    return(
-        <a>Hello from Link block component with test set to {props.test}</a>
+    return (
+        <a href={props.link} target="_blank" rel="noreferrer">{props.test}</a>
     )
 }
 
