@@ -1,12 +1,10 @@
-import { Image, Title } from '../../blocks';
+import { Title, Text } from '../../blocks';
 
 const Header = () => {
     return(
         <header>
-            Hello from the Header container component, I hold an Image block component: <br/>
-            <Image class={"image imgCenter imgMedium"} /><br/>
-            And a Title block component: <br/>
-            <Title content={'you are now a header title'}/>
+            <Title id={"header_title"} content={"Welcome to the Infinite Scroll"} />
+            <Text id={"header_text"} text={"Scroll down and explore our templates"} />
         </header>
     )
 }

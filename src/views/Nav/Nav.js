@@ -1,5 +1,9 @@
-// import HomePage from "./HomePage/HomePage";
-//
-// // Any page in your app is a "view"
-//
-// export default HomePage;
+import { Nav } from '../../components';
+
+function NavSection() {
+    return (
+        <Nav />
+    )
+}
+
+export default NavSection;
