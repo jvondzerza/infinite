@@ -1,10 +1,32 @@
 import imgArray from "../../../store/images.json";
 let ColorScheme = require('color-scheme');
+let x = Math.floor(Math.random() * 90);
 
 const Image = (props) => {
 
-    let randImg = imgArray[Math.floor(Math.random() * 90)];
-    let imageHue = hexToHSL(randImg.color);
+    let randImg = imgArray[x];
+    let imageColor = randImg.color;
+    let url = randImg.urls.raw;
+    let description = randImg.description;
+
+    console.log(randImg);
+    console.log(randImg.color);
+    console.log(randImg.urls.raw);
+    console.log(randImg.description);
+
+    if (randImg.color === imageColor){
+        console.log("color ok");
+    }
+    if (randImg.urls.raw === url){
+        console.log("url ok");
+    }
+    if (randImg.description === description){
+        console.log("description ok");
+    }
+
+
+    let imageHue = hexToHSL(imageColor);
+    console.log(imageHue);
 
     let schemeDefault = new ColorScheme();
     let schemePastel = new ColorScheme();
@@ -48,7 +70,7 @@ const Image = (props) => {
     return (
         //<img src={props.src} alt={props.alt} className={props.class} id={props.id}/>
         <div style={{display: "flex", flexDirection:"column"}}>
-            <img src={randImg.urls.raw} alt={randImg.description} className={props.class} id={props.id}/>
+            <img src={url} alt={description} className={props.class} id={props.id}/>
             <figcaption>Image by {randImg.user.name}</figcaption>
             <div style={{width:"100%", height:"600px"}}>
                 <div style={{width: "10%", float: "left"}}>
