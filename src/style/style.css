@@ -10,10 +10,51 @@ button {
   background-color: white;
 }
 
+.image {
+  margin-top: 5%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.imgLeft {
+  margin-left: 5%;
+}
+
+.imgRight {
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+.imgCenter {
+  margin: 5% auto;
+}
+
+.imgSmall {
+  height: 200px;
+  width: 200px;
+}
+
+.imgMedium {
+  height: 400px;
+  width: 400px;
+}
+
+.imgLarge {
+  height: 600px;
+  width: 600px;
+}
+
+.colorTest {
+  height: 100px;
+  width: 100px;
+}
+
 .text {
   font-size: 1rem;
 }
 
 .title {
   font-size: 3rem;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
