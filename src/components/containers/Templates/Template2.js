@@ -1,4 +1,4 @@
-import { Image, Title, Text } from '../../blocks';
+import { Image, Title } from '../../blocks';
 
 const Template2 = (props) => {
     let imageInfo = props.imgInfo;

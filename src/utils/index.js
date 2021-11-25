@@ -1,1 +1,3 @@
-// global utility functions
+import hexToHSL from './helpers/hexToHSL';
+
+export default hexToHSL;

@@ -1,11 +1,9 @@
+import { useState } from 'react';
 import { Image, Title } from '../../blocks';
 
 const Template1 = (props) => {
-    let imageInfo = props.imgInfo;
-    let colorScheme = props.scheme;
-
-    console.log(imageInfo);
-    console.log(colorScheme);
+    const [imageInfo, setImageInfo] = useState(props.imgInfo);
+    const [colorScheme, setColorScheme] = useState(props.scheme);
 
     return(
         <div className={"template1"}>
