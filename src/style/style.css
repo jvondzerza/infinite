@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 :root {
   --ff-header-title: "Zen Dots", cursive;
   --ff-header-text: "MuseoModerno", cursive;
+  --ff-nav-link: "Comfortaa", cursive;
 }
 
 * {
@@ -113,6 +115,9 @@ nav {
 }
 nav a {
   position: absolute;
+  color: black;
+  text-decoration: none;
+  font-family: var(--ff-nav-link);
   z-index: 1111;
 }
 nav #sven {

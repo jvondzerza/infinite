@@ -11,6 +11,11 @@ nav {
 
     a {
         position: absolute;
+
+        color: black;
+        text-decoration: none;
+        font-family: var(--ff-nav-link);
+
         z-index: 1111;
     }
 
