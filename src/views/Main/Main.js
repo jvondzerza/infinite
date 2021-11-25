@@ -1,9 +1,9 @@
-// import Section container from "./HomePage/HomePage";
-//
-// // Any page in your app is a "view"
-//
-// return
-//     section container...
-// }
-//
-// export default HomePage;
+import { Section } from "../../components";
+
+function MainSection() {
+    return (
+        <Section />
+    )
+}
+
+export default MainSection;

@@ -33,11 +33,18 @@ button {
 }
 
 .image {
-  margin-top: 5%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  display: flex;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img {
+  position: relative;
+}
+.img figcaption {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
 }
 
 .imgLeft {
@@ -50,7 +57,7 @@ button {
 }
 
 .imgCenter {
-  margin: 5% auto;
+  margin: auto;
 }
 
 .imgSmall {
@@ -162,25 +169,15 @@ nav #stefan {
   height: 100vh;
   display: flex;
   flex-direction: row;
+}
+
+.t1 {
   justify-content: space-around;
   background: #833ab4;
   background: linear-gradient(227deg, #833ab4 0%, #fd4646 62%, #fcb045 100%);
   background-size: 400% 400%;
-  -webkit-animation: gradient 8s ease infinite;
-          animation: gradient 8s ease infinite;
+  animation: gradient 8s ease infinite;
   height: 100vh;
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 @keyframes gradient {
@@ -206,4 +203,56 @@ nav #stefan {
 .right {
   position: relative;
   top: calc(100% - 150px);
-}/*# sourceMappingURL=style.css.map */
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.t3 {
+  font-family: monospace;
+  position: relative;
+}
+.t3 .center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50VW;
+  height: 100%;
+}
+.t3 .center .img {
+  width: 500px;
+  height: 500px;
+  margin-top: 200px;
+}
+.t3 .center .t3-title {
+  position: absolute;
+  top: 150px;
+  font-size: 6rem;
+  font-weight: bold;
+  mix-blend-mode: exclusion;
+  z-index: 2;
+}
+.t3 .center .t3-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 90%;
+  z-index: 1;
+}
+.t3 #t3-text {
+  width: 100VH;
+  font-size: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

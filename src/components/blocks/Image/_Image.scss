@@ -1,8 +1,20 @@
 .image{
-  margin-top: 5%;
+  display: flex;
   object-fit: cover;
   object-position: center;
 }
+
+.img {
+  position: relative;
+  figcaption {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+
+}
+
+
 
 .imgLeft {
   margin-left: 5%;
@@ -14,7 +26,7 @@
 }
 
 .imgCenter {
-  margin: 5% auto;
+  margin: auto;
 }
 
 .imgSmall {
