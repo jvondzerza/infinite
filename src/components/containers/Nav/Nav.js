@@ -1,10 +1,10 @@
 const Nav = () => {
     return(
         <nav>
-            <a id="sven" href="www.github.com" target="_blank">Sven</a>
-            <a id="stefan" href="www.github.com" target="_blank">Stefan</a>
-            <a id="daryl" href="www.github.com" target="_blank">Daryl</a>
-            <a id="jorg" href="www.github.com" target="_blank">Jörg</a>
+            <a id="sven" href="https://github.com/" target="_blank" rel="noreferrer">Sven</a>
+            <a id="stefan" href="https://github.com/" target="_blank" rel="noreferrer">Stefan</a>
+            <a id="daryl" href="https://github.com/" target="_blank" rel="noreferrer">Daryl</a>
+            <a id="jorg" href="https://github.com/" target="_blank" rel="noreferrer">Jörg</a>
         </nav>
     )
 }
