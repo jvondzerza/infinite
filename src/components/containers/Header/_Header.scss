@@ -9,21 +9,27 @@ header {
 
     place-items: center;
 
-    #header_title {
+    background: var(--clr-black);
+
+    #header_title,
+    #header_text {
         grid-column: 3 / 5;
+
+        color: var(--clr-white);
+        text-align: center;
+    }
+
+    #header_title {
         grid-row: 4 / 5;
         
-        text-align: center;
         font-family: var(--ff-header-title);
         font-size: 5rem;
     }
 
     #header_text {
         width: 50%;
-        grid-column: 3 / 5;
         grid-row: 5 / 6;
 
-        text-align: center;
         font-family: var(--ff-header-text);
         font-size: 1.25rem;
     }
