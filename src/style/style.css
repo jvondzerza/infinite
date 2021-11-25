@@ -156,4 +156,54 @@ nav #daryl {
 nav #stefan {
   grid-column: 5/7;
   grid-row: 6/8;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #833ab4;
+  background: linear-gradient(227deg, #833ab4 0%, #fd4646 62%, #fcb045 100%);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 8s ease infinite;
+          animation: gradient 8s ease infinite;
+  height: 100vh;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.left {
+  position: relative;
+  top: 40vh;
+}
+.left .t1-title {
+  font-size: 5rem;
+  max-width: 30vw;
+}
+
+.right {
+  position: relative;
+  top: calc(100% - 150px);
 }/*# sourceMappingURL=style.css.map */
