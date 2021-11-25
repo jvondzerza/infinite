@@ -1,8 +1,7 @@
-import { Article, Header, Main, Nav, Section } from './containers';
+import { Header, Main, Nav, Section } from './containers';
 import { Image, Link, Text, Title } from "./blocks";
 
-export { 
-    Article, 
+export {
     Header, 
     Main, 
     Nav, 
