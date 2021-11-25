@@ -1,12 +1,10 @@
-import { Image, Title } from '../../blocks';
+import { Title, Text } from '../../blocks';
 
 const Header = () => {
     return(
         <header>
-            Hello from the Header container component, I hold an Image block component: <br/>
-            <Image class={"image imgCenter imgMedium"} /><br/>
-            And a Title block component: <br/>
-            <Title content={'you are now a header title'}/>
+            <Title id={"header_title"} content={"Agence créative à vos côtés"} />
+            <Text id={"header_text"} text={"Une équipe simple & funky, inspirée par les projets vertueux, animée par votre réussite."} />
         </header>
     )
 }
