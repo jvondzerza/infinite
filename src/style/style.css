@@ -136,6 +136,11 @@ button {
   right: 15%;
 }
 
+#blob {
+  width: 80%;
+  height: 80%;
+}
+
 header {
   position: relative;
   display: grid;
