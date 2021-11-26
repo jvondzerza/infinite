@@ -18,6 +18,7 @@ function Section() {
 
     const imageInfo = {
         url: randImg.urls.small,
+        urlRegular: randImg.urls.regular,
         description: randImg.description,
         credit: randImg.user.name,
         creditUrl: randImg.links.html

@@ -9,7 +9,7 @@ const Template3 = (props) => {
         <section className={'main t3'}>
             <section className={'center'}>
                 <Title class="t3-title" content="Welcome 3!" />
-                <Image className='image imgCenter imgMedium t3-img' url={imageInfo.url} description={imageInfo.description} credit={imageInfo.credit} creditUrl={imageInfo.creditUrl}/>
+                <Image className='image imgCenter imgMedium t3-img' url={imageInfo.urlRegular} description={imageInfo.description} credit={imageInfo.credit} creditUrl={imageInfo.creditUrl}/>
             </section>
             <Text id={'t3-text'} text={"scroll"} accent={colorScheme.accent1}/>
         </section>
