@@ -1,4 +1,4 @@
-import { Title, Text } from '../../blocks';
+import { Title, Text, Svg } from '../../blocks';
 
 const Header = () => {
     return(
@@ -10,3 +10,4 @@ const Header = () => {
 }
 
 export default Header;
+

@@ -34,8 +34,10 @@ button {
 
 .image {
   display: flex;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .img {
@@ -86,6 +88,33 @@ button {
 
 .title {
   font-size: 3rem;
+}
+
+.svgSmall {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.svgMedium {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.svgLarge {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.svgAbsolute {
+  position: absolute;
+}
+
+.svgBackground {
+  z-index: 0;
+}
+
+.svgForeground {
+  z-index: 5;
 }
 
 header {
@@ -165,6 +194,11 @@ nav #stefan {
   grid-row: 6/8;
 }
 
+section {
+  margin: 0;
+  height: 100VH;
+}
+
 .main {
   height: 100vh;
   display: flex;
@@ -176,8 +210,21 @@ nav #stefan {
   background: #833ab4;
   background: linear-gradient(227deg, #833ab4 0%, #fd4646 62%, #fcb045 100%);
   background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
+  -webkit-animation: gradient 8s ease infinite;
+          animation: gradient 8s ease infinite;
   height: 100vh;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes gradient {
@@ -240,8 +287,10 @@ nav #stefan {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   opacity: 90%;
   z-index: 1;
 }
@@ -253,6 +302,4 @@ nav #stefan {
   left: 3%;
   mix-blend-mode: multiply;
   z-index: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
