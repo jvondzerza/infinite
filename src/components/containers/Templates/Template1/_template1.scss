@@ -2,13 +2,16 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
+}
+
+.t1 {
   justify-content: space-around;
   background: rgb(131, 58, 180);
   background: linear-gradient(
-    227deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgb(253, 70, 70) 62%,
-    rgba(252, 176, 69, 1) 100%
+                  227deg,
+                  rgba(131, 58, 180, 1) 0%,
+                  rgb(253, 70, 70) 62%,
+                  rgba(252, 176, 69, 1) 100%
   );
   background-size: 400% 400%;
   animation: gradient 8s ease infinite;

@@ -1,23 +1,43 @@
-import { Image, Link, Text, Title } from "../../blocks";
-import imgArray from "../../../store/images.json";
+import { useEffect, useState } from "react";
 
-const imgInfo = "content of the image.json file";
-let imgUrl = "imgInfo.url";
-let color = "imgInfo.color";
-let text = "text from api";
-let background = "complementary color of image"
-
+import Template1 from "../Templates/Template1/template1";
+import Template3 from "../Templates/Template3/template3";
+import { randImg, imageColor, colorsArray } from "../../../store";
 
 function Section() {
-    console.log(imgArray);
+    const [imageInfo, setImageInfo] = useState({
+        url: randImg.urls.small,
+        description: randImg.description,
+        credit: randImg.user.name,
+        creditUrl: randImg.links.html
+    });
+    
+    const [colorScheme, setColorScheme] = useState({
+        bgColor: imageColor,
+        txtColor: "#" + colorsArray[2],
+        accent1: "#" + colorsArray[0],
+        accent2: "#" + colorsArray[1],
+        accent3: "#" + colorsArray[3]
+    });
 
+    let templateUsed = <Template1 imgInfo={imageInfo} scheme={colorScheme}/>;
+
+    useEffect(() => {
+        document.documentElement.style.setProperty('background-color', colorScheme.bgColor)
+        document.documentElement.style.setProperty('color', colorScheme.txtColor)
+    }, [imageInfo, colorScheme])
+
+    switch (Math.floor(Math.random() * 3) + 1){
+        case 1:
+            templateUsed = <Template1 imgInfo={imageInfo} scheme={colorScheme}/>;
+            break;
+        default:
+            templateUsed = <Template3 imgInfo={imageInfo} scheme={colorScheme}/>;
+            break;
+    }
     return (
         <section>
-            Hello from the section container component, I can hold a lot of child components such as: <br/>
-            An image <br/>
-            <Image test={"this is the section calling"} /><br/>
-            A Link <br/>
-            <Link test={"section link now"}/><br/>
+            {templateUsed}
         </section>
     )
 }
