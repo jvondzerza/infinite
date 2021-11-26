@@ -342,33 +342,32 @@ nav #stefan {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  overflow: hidden;
 }
 
 #t3-title1 {
-  position: absolute;
-  top: 18%;
-  left: 50%;
-  transform: translate(-50%, 5%);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
+  position: relative;
+  width: 50VH;
+  display: flex;
+  justify-content: center;
+  top: 19.2VH;
   height: fit-content;
   z-index: 10;
 }
 
 #t3-title2 {
   position: absolute;
+  width: 50VH;
+  display: flex;
+  justify-content: center;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   z-index: 5;
 }
 
 .t3-title {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   font-size: 6rem;
   font-weight: bold;
@@ -376,17 +375,16 @@ nav #stefan {
 
 #t3-imgContainer {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
+  top: 50VH;
+  transform: translate(0%, -50%);
+  width: 50VH;
+  height: 50VH;
   overflow: hidden;
   z-index: 1;
 }
 #t3-imgContainer .img {
-  width: 500px;
-  height: 500px;
+  width: 50VH;
+  height: 50VH;
   position: relative;
 }
 
@@ -394,17 +392,15 @@ nav #stefan {
   position: relative;
   top: 0;
   left: 0;
-  transform: translate(-250px, -10%);
-  width: 1000px;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  transform: translate(-15VH, -12VW);
+  width: 80VH;
+  height: 80VH;
+  object-fit: cover;
+  object-position: center;
 }
 
 #t3-text {
-  width: 100VH;
+  width: 100VW;
   font-size: 10rem;
   position: absolute;
   top: 50%;
