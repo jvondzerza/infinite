@@ -34,10 +34,8 @@ button {
 
 .image {
   display: flex;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .img {
@@ -210,21 +208,8 @@ section {
   background: #833ab4;
   background: linear-gradient(227deg, #833ab4 0%, #fd4646 62%, #fcb045 100%);
   background-size: 400% 400%;
-  -webkit-animation: gradient 8s ease infinite;
-          animation: gradient 8s ease infinite;
+  animation: gradient 8s ease infinite;
   height: 100vh;
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 @keyframes gradient {
@@ -252,49 +237,67 @@ section {
   top: calc(100% - 150px);
 }
 
-.main {
+#t3-main {
+  font-family: monospace;
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.t3 {
-  font-family: monospace;
-  position: relative;
-}
-.t3 .center {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 50VW;
-  height: 100%;
-}
-.t3 .center .img {
-  width: 500px;
-  height: 500px;
-  margin-top: 200px;
-}
-.t3 .center .t3-title {
+#t3-title1 {
   position: absolute;
-  top: 150px;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  height: fit-content;
+  z-index: 10;
+}
+
+#t3-title2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: fit-content;
+  z-index: 5;
+}
+
+.t3-title {
+  height: fit-content;
   font-size: 6rem;
   font-weight: bold;
-  mix-blend-mode: exclusion;
-  z-index: 2;
 }
-.t3 .center .t3-img {
+
+#t3-imgContainer {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  opacity: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
   z-index: 1;
 }
-.t3 #t3-text {
+#t3-imgContainer .img {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+#t3-img {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(-250px, -10%);
+  width: 1000px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+#t3-text {
   width: 100VH;
   font-size: 10rem;
   position: absolute;
@@ -302,4 +305,6 @@ section {
   left: 3%;
   mix-blend-mode: multiply;
   z-index: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
