@@ -1,9 +1,8 @@
-import { HeaderSection, NavSection, MainSection } from "./views";
+import { HeaderSection, MainSection } from "./views";
 
 function App() {
     return (
         <>
-            <NavSection />
             <HeaderSection />
             <MainSection />
         </>
