@@ -1,6 +1,6 @@
 const Link = (props) => {
     return (
-        <a href={props.link} target="_blank" rel="noreferrer">{props.test}</a>
+        <a className={"link"} id={props.id} href={props.link} target="_blank" rel="noreferrer">{props.content}</a>
     )
 }
 

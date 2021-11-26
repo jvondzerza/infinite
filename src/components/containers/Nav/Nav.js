@@ -1,10 +1,12 @@
+import { Link } from '../../blocks';
+
 const Nav = () => {
     return(
         <nav>
-            <a id="sven" href="https://github.com/" target="_blank" rel="noreferrer">Sven</a>
-            <a id="stefan" href="https://github.com/" target="_blank" rel="noreferrer">Stefan</a>
-            <a id="daryl" href="https://github.com/" target="_blank" rel="noreferrer">Daryl</a>
-            <a id="jorg" href="https://github.com/" target="_blank" rel="noreferrer">Jörg</a>
+            <Link id={"sven"} href={"https://github.com/sven-i-am"} content={"Sven"}/>
+            <Link id={"stefan"} href={"https://github.com/StefanAmur"} content={"Stefan"}/>
+            <Link id={"daryl"} href={"https://github.com/Leweyse"} content={"Daryl"}/>
+            <Link id={"jorg"} href={"https://github.com/jvondzerza"} content={"Jörg"}/>
         </nav>
     )
 }

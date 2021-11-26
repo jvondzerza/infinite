@@ -3,6 +3,7 @@ import { Img } from "../../../store";
 
 import Nav from '../Nav/Nav';
 import Template1 from "../Templates/Template1/template1";
+import Template2 from "../Templates/Template2/template2";
 import Template3 from "../Templates/Template3/template3";
 
 function Section() {
@@ -38,6 +39,11 @@ function Section() {
         case 1:
             templateUsed = <Template1 imgInfo={imageInfo} scheme={colorScheme}/>;
             break;
+
+        case 2:
+            templateUsed = <Template2 imgInfo={imageInfo} scheme={colorScheme}/>;
+            break;
+
         default:
             templateUsed = <Template3 imgInfo={imageInfo} scheme={colorScheme}/>;
             break;
@@ -46,8 +52,8 @@ function Section() {
     useEffect(() => {
         sectionRef.current.style.setProperty('--bg', colorScheme.bgColor);
         sectionRef.current.style.setProperty('--txt', colorScheme.txtColor);
-        sectionRef.current.style.setProperty('--clr-white', colorScheme.txtColor);
-    }, [colorScheme.bgColor, colorScheme.txtColor])
+        sectionRef.current.style.setProperty('--clr-white', colorScheme.accent3);
+    }, [colorScheme.bgColor, colorScheme.txtColor, colorScheme.accent3])
 
     return (
         <>
