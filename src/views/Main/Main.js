@@ -1,8 +1,8 @@
-import { Section } from "../../components";
+import { Main } from "../../components";
 
 function MainSection() {
     return (
-        <Section />
+        <Main />
     )
 }
 

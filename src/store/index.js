@@ -3,16 +3,24 @@ import data from "./data/images.json";
 
 const ColorScheme = require('color-scheme');
 
-const randImg = data[Math.floor(Math.random() * 90)];
-const imageColor = randImg.color;
-const imageHue = hexToHSL(imageColor);
+function imgData(rand) {
+    const randImg = data[Math.floor(rand * 90)];
+    const imageColor = randImg.color;
+    const imageHue = hexToHSL(imageColor);
 
-const scheme = new ColorScheme();
+    const scheme = new ColorScheme();
 
-scheme.from_hue(imageHue)
-    .scheme('mono')
-    .variation('light');
+    scheme.from_hue(imageHue)
+        .scheme('mono')
+        .variation('light');
 
-const colorsArray = scheme.colors();
+    const colorsArray = scheme.colors();
 
-export { randImg, imageColor, colorsArray };
+    return {
+        img: randImg, 
+        clr: imageColor, 
+        clrArr: colorsArray
+    }
+}
+
+export { imgData };
