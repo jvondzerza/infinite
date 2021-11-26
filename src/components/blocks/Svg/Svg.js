@@ -16,7 +16,7 @@ const Svg = (props) => {
             break;
     }
     return (
-        <svg className={props.className} width={"200"} height={"200"} viewBox={"0 0 200 200"}>
+        <svg className={props.className} id={props.id} width={"200"} height={"200"} viewBox={"0 0 200 200"}>
             {path}
         </svg>
     )

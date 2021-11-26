@@ -4,8 +4,8 @@
 }
 
 .svgMedium {
-  max-width: 200px;
-  max-height: 200px;
+  min-width: 300px;
+  min-height: 300px;
 }
 
 .svgLarge {
@@ -23,4 +23,22 @@
 
 .svgForeground {
   z-index: 5;
+}
+
+#square {
+  top: 65%;
+  left: 20%;
+  transition: ease-in-out;
+}
+#triangle {
+  top: 5%;
+  left: 10%;
+}
+#parallelogram {
+  top: 2%;
+  right: 20%;
+}
+#circle {
+  top: 45%;
+  right: 15%;
 }
