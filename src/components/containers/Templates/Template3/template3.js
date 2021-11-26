@@ -95,8 +95,8 @@ const Template3 = (props) => {
     }
 
     function mouseLeave(){
-        viewBox.current.style.top = "50%";
-        viewBox.current.style.left = "50%";
+        viewBox.current.style.top = "50VH";
+        viewBox.current.style.left = "";
         img.current.style.top = "0";
         img.current.style.left = "0";
         t2.current.style.top = "0";
