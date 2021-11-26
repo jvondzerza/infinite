@@ -4,7 +4,7 @@ import data from "./data/images.json";
 const ColorScheme = require('color-scheme');
 
 function imgData(rand) {
-    const randImg = data[Math.floor(rand * 90)];
+    const randImg = data[Math.floor(rand * data.length)];
     const imageColor = randImg.color;
     const imageHue = hexToHSL(imageColor);
 
