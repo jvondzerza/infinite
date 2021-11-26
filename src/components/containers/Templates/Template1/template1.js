@@ -7,7 +7,7 @@ const Template1 = (props) => {
     return (
         <section className={'main t1'}>
             <section className={'left'}>
-                <Title class="t1-title" content="I'm such a big title, omg I can't believe this" />
+                <Title class="t1-title" content="I'm such a big title" />
             </section>
 
             <section className={'right'}>
