@@ -34,8 +34,10 @@ button {
 
 .image {
   display: flex;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .img {
@@ -208,8 +210,21 @@ section {
   background: #833ab4;
   background: linear-gradient(227deg, #833ab4 0%, #fd4646 62%, #fcb045 100%);
   background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
+  -webkit-animation: gradient 8s ease infinite;
+          animation: gradient 8s ease infinite;
   height: 100vh;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes gradient {
@@ -251,6 +266,8 @@ section {
   top: 18%;
   left: 50%;
   transform: translate(-50%, 5%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   z-index: 10;
 }
@@ -260,11 +277,15 @@ section {
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   z-index: 5;
 }
 
 .t3-title {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   font-size: 6rem;
   font-weight: bold;
@@ -293,8 +314,10 @@ section {
   transform: translate(-250px, -10%);
   width: 1000px;
   height: auto;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #t3-text {
@@ -305,6 +328,4 @@ section {
   left: 3%;
   mix-blend-mode: multiply;
   z-index: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
