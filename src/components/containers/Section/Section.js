@@ -1,12 +1,15 @@
 import { useEffect, useRef } from "react";
-import { imgData } from "../../../store";
+import { Img } from "../../../store";
 
 import Nav from '../Nav/Nav';
 import Template1 from "../Templates/Template1/template1";
 import Template3 from "../Templates/Template3/template3";
 
 function Section() {
-    const imageData = imgData(Math.random());
+    const imgData = new Img();
+    imgData._setValues(Math.random());
+    
+    const imageData = imgData._getValues();
     const randImg = imageData.img;
     const imageColor = imageData.clr;
     const colorsArray = imageData.clrArr;

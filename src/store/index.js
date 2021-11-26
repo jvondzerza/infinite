@@ -2,25 +2,28 @@ import hexToHSL from "../utils";
 import data from "./data/images.json";
 
 const ColorScheme = require('color-scheme');
+const scheme = new ColorScheme();
 
-function imgData(rand) {
-    const randImg = data[Math.floor(rand * data.length)];
-    const imageColor = randImg.color;
-    const imageHue = hexToHSL(imageColor);
+class Img {
+    _setValues(rand) {
+        this.randImg = data[Math.floor(rand * data.length)];
+        this.imageColor = this.randImg.color;
+        this.imageHue = hexToHSL(this.imageColor);
 
-    const scheme = new ColorScheme();
+        scheme.from_hue(this.imageHue)
+            .scheme('mono')
+            .variation('light');
 
-    scheme.from_hue(imageHue)
-        .scheme('mono')
-        .variation('light');
+        this.colorsArray = scheme.colors();
+    }
 
-    const colorsArray = scheme.colors();
-
-    return {
-        img: randImg, 
-        clr: imageColor, 
-        clrArr: colorsArray
+    _getValues() {
+        return {
+            img: this.randImg, 
+            clr: this.imageColor, 
+            clrArr: this.colorsArray
+        }
     }
 }
 
-export { imgData };
+export { Img };
