@@ -13,7 +13,7 @@ const Main = () => {
             clientHeight
         } = document.documentElement;
     
-        if (scrollTop + clientHeight >= (scrollHeight - 5) / 1.1) setDisplay(true);
+        if (scrollTop + clientHeight >= (scrollHeight - 5) / 1.15) setDisplay(true);
     });
 
     if (display) {
