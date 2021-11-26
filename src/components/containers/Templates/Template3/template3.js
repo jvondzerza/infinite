@@ -11,11 +11,10 @@ const Template3 = (props) => {
                 <Title class={"t3-title"} content={"Welcome!"} color = {colorScheme.txtColor} />
             </section>
             <section id={'t3-imgContainer'}  onMouseOver={mouseOver} onMouseLeave={mouseLeave}>
-
                 <section id={'t3-title2'}>
                     <Title class={"t3-title"} content={"Welcome!"} color = {colorScheme.accent3} />
                 </section>
-                <Image id='t3-img' url={imageInfo.url} description={imageInfo.description} credit={imageInfo.credit} creditUrl={imageInfo.creditUrl} />
+                <Image id='t3-img' url={imageInfo.urlRegular} description={imageInfo.description} credit={imageInfo.credit} creditUrl={imageInfo.creditUrl} />
             </section>
             <Text id={'t3-text'} text={"scroll"} accent={colorScheme.accent1}/>
         </section>
