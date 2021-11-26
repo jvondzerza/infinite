@@ -1,9 +1,11 @@
-import { Header } from '../../components';
-import {Template3} from "../../components/containers";
+import { Header, Nav } from '../../components';
 
 function HeaderSection() {
     return (
-        <Header />
+        <>
+            <Nav />
+            <Header />
+        </>
     )
 }
 

@@ -1,4 +1,11 @@
-section {
+.section {
+    --bg: black;
+    --txt: white;
+    --clr-white: white;
+
     margin: 0;
     height: 100vh;
+
+    background: var(--bg);
+    color:var(--txt);
 }
