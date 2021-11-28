@@ -1,0 +1,10 @@
+body,
+main {
+    overflow-y: hidden;
+}
+
+main {
+    position: absolute;
+    transition: transform 0.75s ease-out;
+    z-index: 1111;
+}

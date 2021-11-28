@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Img } from "../../../store";
 
 import Nav from '../Nav/Nav';
@@ -6,7 +6,7 @@ import Template1 from "../Templates/Template1/template1";
 import Template2 from "../Templates/Template2/template2";
 import Template3 from "../Templates/Template3/template3";
 
-function Section() {
+const Section = (props) => {
     const imgData = new Img();
     imgData._setValues(Math.random());
     
@@ -57,7 +57,7 @@ function Section() {
 
     return (
         <>
-            <section ref={sectionRef} className={'section'}>
+            <section key={props.key} ref={sectionRef} className={'section'}>
                 <Nav />
                 {templateUsed}
             </section>

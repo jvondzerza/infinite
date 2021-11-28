@@ -181,6 +181,17 @@ header #header_text {
   z-index: 1;
 }
 
+body,
+main {
+  overflow-y: hidden;
+}
+
+main {
+  position: absolute;
+  transition: transform 0.75s ease-out;
+  z-index: 1111;
+}
+
 nav {
   position: absolute;
   display: grid;
@@ -234,8 +245,9 @@ nav #stefan {
   --bg: black;
   --txt: white;
   --clr-white: white;
-  margin: 0;
+  position: relative;
   height: 100vh;
+  margin: 0;
   background: var(--bg);
   color: var(--txt);
 }
@@ -351,6 +363,8 @@ nav #stefan {
   display: flex;
   justify-content: center;
   top: 19.2VH;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   z-index: 10;
 }
@@ -363,11 +377,15 @@ nav #stefan {
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   z-index: 5;
 }
 
 .t3-title {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   font-size: 6rem;
   font-weight: bold;
@@ -395,8 +413,10 @@ nav #stefan {
   transform: translate(-15VH, -12VW);
   width: 80VH;
   height: 80VH;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #t3-text {
