@@ -4,7 +4,11 @@ main {
 }
 
 main {
+    --py: 0px;
+
     position: absolute;
-    transition: transform 0.75s ease-out;
+
+    transform: translate(0, var(--py));
+    transition: transform 0.5s linear;
     z-index: 1111;
 }
