@@ -1,5 +1,5 @@
 import { Title, Text, Svg } from '../../blocks';
-import {gsap} from "gsap";
+import { gsap } from "gsap";
 
 const Header = () => {
     let timelineSquare = gsap.timeline({paused: false});
@@ -22,8 +22,8 @@ const Header = () => {
             .fromTo("#triangle", {rotation: 0, y: 0}, {delay: 0.5, duration: 1.5, rotation: -15, y: 80, ease: "out"})
             .to('#triangle', {duration: 2, delay: 1, rotation: 0, y: 0, ease: "out"});
         timelineBlob
-            .fromTo("#blob", {y: 300, rotation: 180}, {y: -300, duration: 4, rotation: 0, ease: "bounce.out"})
-            .fromTo("#blob", {y: -300, rotation: 0}, {y: 300, rotation: 180, duration: 4, ease: "bounce.out"})
+            .fromTo("#blob", {y: 300, rotation: 180, skewX: 0}, {y: -300, duration: 4, rotation: 0, skewX: 20, ease: "bounce.out"})
+            .fromTo("#blob", {y: -300, rotation: 0, skewX: 20}, {y: 300, skewX: 0, delay: 4, rotation: 180, duration: 4, ease: "bounce.out"})
     })
 
     return(
@@ -33,7 +33,7 @@ const Header = () => {
             <Svg shape={'triangle'} className={'svgAbsolute svgBackground svgMedium'} fillColor={'purple'} id={'triangle'} />
             <Svg shape={'parallelogram'} className={'svgAbsolute svgBackground svgMedium'} fillColor={'salmon'} id={'parallelogram'} />
             <Svg shape={'circle'} className={'svgAbsolute svgBackground svgMedium'} fillColor={'teal'} id={'circle'} />
-            <Svg shape={'blob'} className={'svgAbsolute svgBackground svgMedium'} fillColor={'gold'} id={'blob'} />
+            <Svg shape={'blob'} className={'svgAbsolute svgBackground svgMedium'} fillColor={'#93E9BE'} id={'blob'} />
             <Title id={"header_title"} content={"Welcome to the Infinite Scroll"} />
             <Text id={"header_text"} text={"Scroll down and explore our templates"} />
         </header>

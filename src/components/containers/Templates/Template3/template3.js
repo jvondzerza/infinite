@@ -48,7 +48,7 @@ const Template3 = (props) => {
             switch(directionX) {
                 case "left":
                     Xdiff --;
-                    if(Xdiff > -40){
+                    if(Xdiff > -80){
                         boxX -= 0.5;
                         imgX += 0.5;
                         t2X -= 0.3;
@@ -56,7 +56,7 @@ const Template3 = (props) => {
                     break;
                 case "right":
                     Xdiff ++;
-                    if(Xdiff < 40){
+                    if(Xdiff < 80){
                         boxX += 0.5;
                         imgX -= 0.5;
                         t2X += 0.3;
@@ -68,7 +68,7 @@ const Template3 = (props) => {
             switch (directionY){
                 case "up":
                     Ydiff --;
-                    if(Ydiff > -40) {
+                    if(Ydiff > -80) {
                         boxY -= 0.5;
                         imgY += 0.5;
                         t2Y -= 0.2;
@@ -76,7 +76,7 @@ const Template3 = (props) => {
                     break;
                 case "down":
                     Ydiff ++;
-                    if(Ydiff < 40) {
+                    if(Ydiff < 80) {
                         boxY += 0.5;
                         imgY -= 0.5;
                         t2Y += 0.5;

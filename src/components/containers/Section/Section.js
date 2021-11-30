@@ -53,6 +53,9 @@ function Section() {
         sectionRef.current.style.setProperty('--bg', colorScheme.bgColor);
         sectionRef.current.style.setProperty('--txt', colorScheme.txtColor);
         sectionRef.current.style.setProperty('--clr-white', colorScheme.accent3);
+        sectionRef.current.style.setProperty('--g1', colorScheme.bgColor);
+        sectionRef.current.style.setProperty('--g2', colorScheme.accent1);
+        sectionRef.current.style.setProperty('--g3', colorScheme.accent2);
     }, [colorScheme.bgColor, colorScheme.txtColor, colorScheme.accent3])
 
     return (

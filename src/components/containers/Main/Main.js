@@ -1,59 +1,40 @@
 import { useState, useRef, useEffect } from 'react';
 import Section from '../Section/Section';
 
-let position = {
-    x: 0,
-    y: 0
-}
+let pages = [<Section key={0} />, <Section key={1} />, <Section key={2} />];
 
 const Main = () => {
-    const [pages, setPages] = useState({
-        list: [<Section key={0} />, <Section key={1} />, <Section key={2} />]
-    });
 
-    const [lengthChilds, setLengthChilds] = useState({
-        length: pages.list.length
-    });
-
+    const [display, setDisplay] = useState(false);
     const mainRef = useRef();
     let keyRef = useRef(3);
 
     useEffect(() => {
-        const sectionHeight = (mainRef.current.clientHeight / mainRef.current.childNodes.length);
+        const sectionHeight = (mainRef.current.clientHeight / pages.length);
 
-        window.addEventListener('wheel', function (event) {
-            let yEventValue = -1;
+        window.addEventListener('scroll', () => {
+            const {
+                scrollTop,
+                scrollHeight,
+                clientHeight
+            } = document.documentElement;
 
-            if (event.deltaY < 0) {
-                yEventValue = 1;
-            }
-        
-            position.y = position.y + (yEventValue * 12.5);
+            console.log(scrollTop)
 
-            if (position.y < 0) {
-                mainRef.current.style.setProperty('--py', `${Math.round(position.y)}px`);
+            if (scrollTop + clientHeight >= (scrollHeight - 5) / 1.15) setDisplay(true);
 
-                if ((Math.abs(position.y % (sectionHeight * (lengthChilds.length - 1)))) === 0 && yEventValue === -1) {
-                    const newPage = pages.list.concat(<Section key={keyRef.current} />);
-                    setPages({
-                        list: newPage
-                    })
-                    setLengthChilds({
-                        length: newPage.length
-                    });
-                    console.log(pages.list);
-                    keyRef.current++;
-                }
-            } else {
-                position.y = 0;
-                mainRef.current.style.setProperty('--py', `${Math.round(position.y)}px`);
-            }
         })
-    }, [pages, lengthChilds]);
+    }, []);
+
+    if (display) {
+        pages.push(<Section key={keyRef.current} />);
+        keyRef.current++;
+        setDisplay(false)
+    }
 
     return (
-        <main ref={mainRef}>
-            {pages.list.map(section => section)}
+        <main id={"main"} ref={mainRef}>
+            {pages.map(section => section)}
         </main>
     );
 }

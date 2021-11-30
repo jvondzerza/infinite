@@ -35,10 +35,8 @@ button {
 
 .image {
   display: flex;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .img {
@@ -181,16 +179,12 @@ header #header_text {
   z-index: 1;
 }
 
-body,
-main {
-  overflow-y: hidden;
-}
-
 main {
   --py: 0px;
   position: absolute;
   transform: translate(0, var(--py));
   transition: transform 0.5s linear;
+  will-change: auto;
   z-index: 1111;
 }
 
@@ -247,9 +241,13 @@ nav #stefan {
   --bg: black;
   --txt: white;
   --clr-white: white;
+  --g1: red;
+  --g2: red;
+  --g3: red;
   position: relative;
   height: 100vh;
   margin: 0;
+  min-width: 100%;
   background: var(--bg);
   color: var(--txt);
 }
@@ -262,24 +260,10 @@ nav #stefan {
 
 .t1 {
   justify-content: space-evenly;
-  background: #833ab4;
-  background: linear-gradient(227deg, #833ab4 0%, #fd4646 62%, #fcb045 100%);
+  background: linear-gradient(227deg, var(--g1) 0%, var(--g2) 62%, var(--g3) 100%);
   background-size: 400% 400%;
-  -webkit-animation: gradient 8s ease infinite;
-          animation: gradient 8s ease infinite;
+  animation: gradient 8s ease infinite;
   height: 100vh;
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 @keyframes gradient {
@@ -314,21 +298,21 @@ nav #stefan {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  will-change: auto;
   grid-template-columns: repeat(2, 0.15fr) repeat(10, 0.1fr) repeat(2, 0.15fr);
   grid-template-rows: repeat(3, 0.3fr) repeat(4, 0.25fr) repeat(2, 0.3fr);
   place-items: center;
 }
 #t2-main #t2-imgContainer {
-  grid-column: 5/11;
-  grid-row: 3/7;
-  display: grid;
-  place-items: center;
+  position: relative;
+  opacity: 0;
 }
 #t2-main #t2-imgContainer .img {
-  width: 60%;
+  width: 100%;
 }
 #t2-main #t2-imgContainer .img #t2-img {
   width: 100%;
+  z-index: 11111111;
 }
 #t2-main #t2-imgContainer .img figcaption {
   font-size: 8px;
@@ -341,8 +325,6 @@ nav #stefan {
   place-items: center;
 }
 #t2-main .t2-title p {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
   max-width: max-content;
   font-size: 4rem;
   mix-blend-mode: difference;
@@ -365,8 +347,6 @@ nav #stefan {
   display: flex;
   justify-content: center;
   top: 19.2VH;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   z-index: 10;
 }
@@ -379,15 +359,11 @@ nav #stefan {
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   z-index: 5;
 }
 
 .t3-title {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   font-size: 6rem;
   font-weight: bold;
@@ -415,10 +391,8 @@ nav #stefan {
   transform: translate(-15VH, -12VW);
   width: 80VH;
   height: 80VH;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 #t3-text {
@@ -451,4 +425,6 @@ nav #stefan {
   html {
     font-size: 75%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
