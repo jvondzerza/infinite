@@ -6,15 +6,10 @@ let position = {
     y: 0
 }
 
+let pages = [<Section key={0} />, <Section key={1} />, <Section key={2} />];
+
 const Main = () => {
-    const [pages, setPages] = useState({
-        list: [<Section key={0} />, <Section key={1} />, <Section key={2} />]
-    });
-
-    const [lengthChilds, setLengthChilds] = useState({
-        length: pages.list.length
-    });
-
+    const [display, setDisplay] = useState(false);
     const mainRef = useRef();
     let keyRef = useRef(3);
 
@@ -33,23 +28,20 @@ const Main = () => {
             if (position.y < 0) {
                 mainRef.current.style.setProperty('--py', `${Math.round(position.y)}px`);
 
-                if ((Math.abs(position.y % (sectionHeight * (lengthChilds.length - 1)))) === 0 && yEventValue === -1) {
-                    const newPage = pages.list.concat(<Section key={keyRef.current} />);
-                    setPages({
-                        list: newPage
-                    })
-                    setLengthChilds({
-                        length: newPage.length
-                    });
-                    console.log(pages.list);
-                    keyRef.current++;
+                if ((Math.abs(position.y % (sectionHeight * (pages.length - 1)))) === 0 && yEventValue === -1) {
+                    setDisplay(true);
                 }
             } else {
                 position.y = 0;
                 mainRef.current.style.setProperty('--py', `${Math.round(position.y)}px`);
             }
         })
-    }, [pages, lengthChilds]);
+    }, []);
+
+    if (display) {
+        pages.push(<Section key={keyRef.current} />);
+        keyRef.current++;
+    }
 
     return (
         <main ref={mainRef}>
