@@ -64,6 +64,7 @@ const Template3 = (props) => {
                     break;
                 case null:
                     break;
+                default: break;
             }
             switch (directionY){
                 case "up":
@@ -84,6 +85,7 @@ const Template3 = (props) => {
                     break;
                 case null:
                     break;
+                default: break;
             }
             viewBox.current.style.top = boxY + "px";
             viewBox.current.style.left = boxX + "px";
