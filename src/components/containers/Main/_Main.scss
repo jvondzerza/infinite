@@ -1,12 +1,11 @@
-
-
 main {
-    --py: 0px;
+  --py: 0px;
 
-    position: absolute;
+  position: absolute;
 
-    transform: translate(0, var(--py));
-    transition: transform 0.5s linear;
-    will-change: auto;
-    z-index: 1111;
+  transform: translate(0, var(--py));
+  transition: transform 0.5s linear;
+  will-change: auto;
+  z-index: 1111;
+  width: 100%;
 }
