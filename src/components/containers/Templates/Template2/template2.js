@@ -14,24 +14,21 @@ const Template2 = (props) => {
     gsap.set(img.current, {xPercent: -50, yPercent: -50});
     const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     const mouse = { x: pos.x, y: pos.y };
-    const speed = 0.75;
+    const speed = 7;
 
     function mouseOver() {
-        imgTimeline.fromTo(img.current,{opacity: 0, scale: 1},{opacity: 1, scale: 1.2, duration: 1});
+        imgTimeline.fromTo(img.current,{opacity: 0},{opacity: 1, duration: 1});
         textTimeline.fromTo(text.current, {scale: 1}, {scale: 1.1, duration: 1});
-        window.addEventListener("mousemove", e => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-        })
     }
 
+    window.addEventListener("mousemove", e => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+    })
+
     function mouseLeave() {
-        imgTimeline.fromTo(img.current,{opacity: 1, scale: 1.2},{delay: 0.25, opacity: 0, scale: 1, duration: 1})
+        imgTimeline.fromTo(img.current,{opacity: 1},{delay: 0.25, opacity: 0, duration: 1})
         textTimeline.fromTo(text.current, {scale: 1.1}, {scale: 1, duration: 1});
-        window.addEventListener("mousemove", e => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-        })
     }
 
     const xSet = gsap.quickSetter(img.current, "x", "px");
