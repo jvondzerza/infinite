@@ -18,7 +18,7 @@ const useHover = () => {
                 ref.current.removeEventListener("mouseout", handleMouseout)
             }
         }
-    }, [ref.current])
+    }, [])
 
     return [ref, isHovered]
 }

@@ -1,54 +1,75 @@
-import { Image, Title } from '../../../blocks';
+import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { useRef } from "react";
-import useHover from "../../../../utils/helpers/useHover";
 
+import { Image, Title } from '../../../blocks';
 
 const Template2 = (props) => {
     let imageInfo = props.imgInfo;
     let colorScheme = props.scheme;
+
     const img = useRef();
-    const [text, isTextHovered] = useHover()
-    let imgTimeline = gsap.timeline({paused: false})
-    let textTimeline = gsap.timeline({paused: false})
-    gsap.set(img.current, {xPercent: -50, yPercent: -50});
-    const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    const mouse = { x: pos.x, y: pos.y };
-    const speed = 7;
+    const text = useRef();
 
-    function mouseOver() {
-        imgTimeline.fromTo(img.current,{opacity: 0},{opacity: 1, duration: 1});
-        textTimeline.fromTo(text.current, {scale: 1}, {scale: 1.1, duration: 1});
+    let tl = gsap.timeline()
+
+    const onMouseEnter = () => {
+        tl.fromTo(
+            img.current,
+            { opacity: 0 },
+            { delay: 0.15, opacity: 1 }
+        );
     }
 
-    window.addEventListener("mousemove", e => {
-        mouse.x = e.x;
-        mouse.y = e.y;
-    })
-
-    function mouseLeave() {
-        imgTimeline.fromTo(img.current,{opacity: 1},{delay: 0.25, opacity: 0, duration: 1})
-        textTimeline.fromTo(text.current, {scale: 1.1}, {scale: 1, duration: 1});
+    const onMouseLeave = () => {
+        tl.fromTo(
+            img.current,
+            { opacity: 1 },
+            { opacity: 0 }
+        );
     }
 
-    const xSet = gsap.quickSetter(img.current, "x", "px");
-    const ySet = gsap.quickSetter(img.current, "y", "px");
+    useEffect(() => {
+        tl.set(img.current, {
+            xPercent: -50,
+            yPercent: -50
+        });
 
-    gsap.ticker.add(() => {
-        const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
-        pos.x += (mouse.x - pos.x) * dt;
-        pos.y += (mouse.y - pos.y) * dt;
-        xSet(pos.x);
-        ySet(pos.y);
-    });
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(img.current, {
+                duration: 0.5,
+                ease: "power1.out",
+                x: e.clientX,
+                y: e.clientY
+            })
+        })
+    }, [tl])
 
     return (
         <div id={'t2-main'}>
             <div ref={img} id={'t2-imgContainer'}>
-                <Image id={'t2-img'} url={imageInfo.urlRegular} description={imageInfo.description} credit={imageInfo.credit} creditUrl={imageInfo.creditUrl} />
+                <Image 
+                    id={'t2-img'} 
+                    url={imageInfo.urlRegular} 
+                    description={imageInfo.description} 
+                    credit={imageInfo.credit} 
+                    creditUrl={imageInfo.creditUrl} 
+                />
             </div>
-            <div ref={text} className={"t2-title"} onMouseEnter={`${isTextHovered ? mouseOver() : mouseLeave()}`}>
-                <Title content={'A DEV {\n} CAN BE \n A DESIGNER'} color={colorScheme.txtColor} />
+            <div 
+                ref={text}
+                className={"t2-title"}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+            >
+                {['A DEV', 'CAN BE', 'A DESIGNER'].map((piece, idx) => {
+                    return (
+                        <Title
+                            key={idx}
+                            content={piece}
+                            color={colorScheme.txtColor}
+                        />
+                    )
+                })}
             </div>
         </div>
     )
