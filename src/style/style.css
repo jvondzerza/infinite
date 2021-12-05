@@ -188,6 +188,7 @@ main {
   transition: transform 0.5s linear;
   will-change: auto;
   z-index: 1111;
+  width: 100%;
 }
 
 nav {
