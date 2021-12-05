@@ -1,3 +1,10 @@
-import hexToHSL from './helpers/hexToHSL';
+import hexToHSL from './helpers/color/hexToHSL';
+import getRandom from './helpers/data/getRandom';
 
-export default hexToHSL;
+export {
+    // COLOR
+    hexToHSL,
+    
+    // DATA
+    getRandom,
+};

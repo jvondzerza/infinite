@@ -1,4 +1,4 @@
-import hexToHSL from "../utils";
+import { hexToHSL } from "../utils";
 import data from "./data/images.json";
 
 const ColorScheme = require('color-scheme');
