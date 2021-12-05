@@ -1,28 +1,39 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Section from '../Section/Section';
 
-let pages = [<Section />, <Section />, <Section />];
+let pages = [<Section key={0} />, <Section key={1} />, <Section key={2} />];
 
 const Main = () => {
-    const [display, setDisplay] = useState(false);
 
-    window.addEventListener('scroll', () => {
-        const { 
-            scrollTop,
-            scrollHeight,
-            clientHeight
-        } = document.documentElement;
-    
-        if (scrollTop + clientHeight >= (scrollHeight - 5) / 1.15) setDisplay(true);
-    });
+    const [display, setDisplay] = useState(false);
+    const mainRef = useRef();
+    let keyRef = useRef(3);
+
+    useEffect(() => {
+        const sectionHeight = (mainRef.current.clientHeight / pages.length);
+
+        window.addEventListener('scroll', () => {
+            const {
+                scrollTop,
+                scrollHeight,
+                clientHeight
+            } = document.documentElement;
+
+            console.log(sectionHeight)
+
+            if (scrollTop + clientHeight >= (scrollHeight - 5) / 1.15) setDisplay(true);
+
+        })
+    }, []);
 
     if (display) {
-        pages.push(<Section />);
-        setDisplay(false);
+        pages.push(<Section key={keyRef.current} />);
+        keyRef.current++;
+        setDisplay(false)
     }
 
     return (
-        <main>
+        <main id={"main"} ref={mainRef}>
             {pages.map(section => section)}
         </main>
     );

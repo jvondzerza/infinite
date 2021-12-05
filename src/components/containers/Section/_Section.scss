@@ -2,10 +2,17 @@
     --bg: black;
     --txt: white;
     --clr-white: white;
+    --g1: red;
+    --g2: red;
+    --g3: red;
 
-    margin: 0;
+    position: relative;
     height: 100vh;
+    margin: 0;
+    min-width: 100%;
 
     background: var(--bg);
     color:var(--txt);
+
+    // scroll-snap-align: start;
 }
