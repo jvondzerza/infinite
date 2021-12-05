@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { createRef, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
 import { Image, Title } from '../../../blocks';
@@ -8,28 +8,17 @@ const Template2 = (props) => {
     let colorScheme = props.scheme;
 
     const img = useRef();
-    const text = useRef();
+    const titleRefs = useRef([]);
+    const title = useRef(['A DEV', 'CAN BE', 'A DESIGNER']);
 
-    let tl = gsap.timeline()
-
-    const onMouseEnter = () => {
-        tl.fromTo(
-            img.current,
-            { opacity: 0 },
-            { delay: 0.15, opacity: 1 }
-        );
+    if (titleRefs.current.length !== title.current.length) {
+        titleRefs.current = Array(title.current.length).fill().map((_, i) => titleRefs.current[i] || createRef());
     }
 
-    const onMouseLeave = () => {
-        tl.fromTo(
-            img.current,
-            { opacity: 1 },
-            { opacity: 0 }
-        );
-    }
+    let tl = gsap.timeline();
 
     useEffect(() => {
-        tl.set(img.current, {
+        gsap.set(img.current, {
             xPercent: -50,
             yPercent: -50
         });
@@ -42,31 +31,36 @@ const Template2 = (props) => {
                 y: e.clientY
             })
         })
+
+        title.current.forEach((piece, idx) => {
+            titleRefs.current[idx].current.addEventListener('mouseover', () => {
+                img.current.classList.add('visible')
+            })
+
+            titleRefs.current[idx].current.addEventListener('mouseleave', () => {
+                img.current.classList.remove('visible')
+            })
+        })
     }, [tl])
 
     return (
         <div id={'t2-main'}>
-            <div ref={img} id={'t2-imgContainer'}>
-                <Image 
-                    id={'t2-img'} 
-                    url={imageInfo.urlRegular} 
-                    description={imageInfo.description} 
-                    credit={imageInfo.credit} 
-                    creditUrl={imageInfo.creditUrl} 
-                />
-            </div>
-            <div 
-                ref={text}
-                className={"t2-title"}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {['A DEV', 'CAN BE', 'A DESIGNER'].map((piece, idx) => {
+            <Image
+                ref={img}
+                id={'t2-img'}
+                url={imageInfo.urlRegular}
+                description={imageInfo.description}
+                credit={imageInfo.credit}
+                creditUrl={imageInfo.creditUrl}
+            />
+            <div className={"t2-title"}>
+                {title.current.map((piece, idx) => {
                     return (
                         <Title
                             key={idx}
                             content={piece}
                             color={colorScheme.txtColor}
+                            ref={titleRefs.current[idx]}
                         />
                     )
                 })}
