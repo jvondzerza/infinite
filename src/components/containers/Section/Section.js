@@ -20,7 +20,7 @@ function Section() {
     const sectionRef = useRef();
 
     // Using references to avoid warnings
-    // relatate with useEffect dependencies
+    // related with useEffect dependencies
     const imageInfo = useRef({
         url: randImg.urls.small,
         urlRegular: randImg.urls.regular,
