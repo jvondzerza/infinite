@@ -3,31 +3,36 @@
     display: grid;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+
     will-change: auto;
 
     grid-template-columns: repeat(2, 0.15fr) repeat(10, 0.1fr) repeat(2, 0.15fr);
     grid-template-rows: repeat(3, 0.3fr) repeat(4, 0.25fr) repeat(2, 0.3fr);
 
+    cursor: default;
     place-items: center;
+    overflow: hidden;
 
-    #t2-imgContainer {
+    .img {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
         position: relative;
-
         opacity: 0;
+        transition: opacity 0.5s ease-out;
 
-        .img {
+        img {
             width: 100%;
+            transform: translateY(25%);
+        }
 
-            #t2-img {
-                width: 100%;
-                z-index: 11111111;
-            }
+        figcaption {
+            bottom: -20%;
+            font-size: 8px;
+            mix-blend-mode: difference;
+        }
 
-            figcaption {
-                font-size: 8px;
-                mix-blend-mode: difference;
-            }
+        &.visible {
+            opacity: 1;
         }
     }
 
