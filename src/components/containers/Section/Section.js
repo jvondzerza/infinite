@@ -53,24 +53,12 @@ function Section() {
         },
         {
             property: '--txt',
-            value: colorScheme.current.txtColor
-        },
-        {
-            property: '--clr-white',
             value: colorScheme.current.accent3
         },
         {
-            property: '--g1',
-            value: colorScheme.current.bgColor
-        },
-        {
-            property: '--g2',
+            property: '--clr-difference',
             value: colorScheme.current.accent1
-        },
-        {
-            property: '--g3',
-            value: colorScheme.current.accent2
-        },
+        }
     ]);
 
     useEffect(() => {
