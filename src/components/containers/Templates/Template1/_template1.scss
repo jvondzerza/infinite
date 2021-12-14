@@ -1,46 +1,55 @@
-.main {
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-}
-
 .t1 {
-  justify-content: space-evenly;
-  background: linear-gradient(
-                  227deg,
-                  var(--g1) 0%,
-                  var(--g2) 62%,
-                  var(--g3) 100%
-  );
-  background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
-  height: 100vh;
+    --accent: red;
+    --size: 50%;
+
+    display: flex;
+    height: 100vh;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    background: radial-gradient(circle, var(--accent) 0%, var(--bg) var(--size));
+    background-size: 200% 200%;
+
+    animation: gradient 16s ease-out infinite;
+
+    .left {
+        position: relative;
+        top: 40vh;
+    
+        .t1-title {
+            max-width: 30vw;
+            color: var(--clr-difference);
+            font-size: 5rem;
+            mix-blend-mode: difference;
+        }
+    }
+    
+    .right {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -25%);
+    }
 }
 
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+    0% {
+        background-position: 0% 0%;
+    }
 
-.left {
-  position: relative;
-  top: 40vh;
+    25% {
+        background-position: 100% 0%;
+    }
 
-  .t1-title {
-    font-size: 5rem;
-    max-width: 30vw;
-  }
-}
+    50% {
+        background-position: 100% 100%;
+    }
 
-.right {
-  position: relative;
-  top: 50%;
-  transform: translate(0, -25%);
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
 }
