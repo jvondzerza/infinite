@@ -108,7 +108,7 @@ const Template3 = (props) => {
             <section id={'t3-title1'}>
                 <Title class={"t3-title"} content={"Welcome!"} color = {colorScheme.txtColor} />
             </section>
-            <section ref={viewBox} id={'t3-imgContainer'} onMouseOver={mouseOver} onMouseLeave={mouseLeave}>
+            <section ref={viewBox} id={'t3-imgContainer'} onMouseOver={mouseOver}>
                 <section ref={t2} id={'t3-title2'}>
                     <Title class={"t3-title"} content={"Welcome!"} color = {colorScheme.accent3} />
                 </section>
