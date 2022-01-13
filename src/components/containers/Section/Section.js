@@ -40,9 +40,9 @@ function Section() {
     // List of templates
     // New templates should be added here
     const templates = [
-        <Template1 imgInfo={imageInfo.current} scheme={colorScheme.current}/>,
-        <Template2 imgInfo={imageInfo.current} scheme={colorScheme.current}/>,
-        <Template3 imgInfo={imageInfo.current} scheme={colorScheme.current}/>
+        <Template1 imageInfo={imageInfo.current} scheme={colorScheme.current}/>,
+        <Template2 imageInfo={imageInfo.current} scheme={colorScheme.current}/>,
+        <Template3 imageInfo={imageInfo.current} scheme={colorScheme.current}/>
     ]
 
     // List of values that will be updated
