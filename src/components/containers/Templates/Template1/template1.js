@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { Image, Title } from '../../../blocks';
-
+import { Figure, Title } from '../../../blocks';
 
 const Template1 = (props) => {
-    let imageInfo = props.imgInfo;
+    let imageInfo = props.imageInfo;
     let colorScheme = props.scheme;
 
     const templateRef = useRef();
@@ -28,12 +27,9 @@ const Template1 = (props) => {
             </aside>
 
             <aside className={'right'}>
-                <Image 
+                <Figure 
                     className='image imgCenter imgMedium t1-img'
-                    url={imageInfo.url}
-                    description={imageInfo.description}
-                    credit={imageInfo.credit}
-                    creditUrl={imageInfo.creditUrl}
+                    imageInfo={imageInfo}
                 />
             </aside>
         </div>

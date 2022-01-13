@@ -32,54 +32,18 @@ button {
   background-color: white;
 }
 
-.image {
-  display: flex;
+.figure .img {
+  width: min(27.5vw, 50rem);
+  aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
-
-.img {
-  position: relative;
-}
-.img figcaption {
+.figure figcaption {
   position: absolute;
   right: 5px;
   bottom: 5px;
-}
-
-.imgLeft {
-  margin-left: 5%;
-}
-
-.imgRight {
-  margin-left: auto;
-  margin-right: 5%;
-}
-
-.imgCenter {
-  margin: auto;
-}
-
-.imgSmall {
-  height: 200px;
-  width: 200px;
-}
-
-.imgMedium {
-  height: 400px;
-  width: 400px;
-}
-
-.imgLarge {
-  height: 600px;
-  width: 600px;
-}
-
-.colorTest {
-  height: 100px;
-  width: 100px;
 }
 
 .link {
@@ -254,10 +218,10 @@ nav #extra {
 .t1 {
   --accent: red;
   --size: 50%;
-  display: flex;
+  display: grid;
   height: 100vh;
-  flex-direction: row;
-  justify-content: space-evenly;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
   background: radial-gradient(circle, var(--accent) 0%, var(--bg) var(--size));
   background-size: 200% 200%;
   -webkit-animation: gradient 16s ease-out infinite;
@@ -265,7 +229,6 @@ nav #extra {
 }
 .t1 .left {
   position: relative;
-  top: 40vh;
 }
 .t1 .left .t1-title {
   max-width: 30vw;
@@ -275,8 +238,10 @@ nav #extra {
 }
 .t1 .right {
   position: relative;
-  top: 50%;
-  transform: translate(0, -25%);
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
 }
 
 @-webkit-keyframes gradient {
@@ -326,23 +291,18 @@ nav #extra {
   place-items: center;
   overflow: hidden;
 }
-#t2-main .img {
+#t2-main .t2-figure {
   grid-column: 1/3;
   grid-row: 1/3;
-  position: relative;
+  position: absolute;
   opacity: 0;
   transition: opacity 0.5s ease-out;
 }
-#t2-main .img img {
-  width: 100%;
-  transform: translateY(25%);
-}
-#t2-main .img figcaption {
-  bottom: -20%;
+#t2-main .t2-figure figcaption {
   font-size: 8px;
   mix-blend-mode: difference;
 }
-#t2-main .img.visible {
+#t2-main .t2-figure.visible {
   opacity: 1;
 }
 #t2-main .t2-title {
@@ -361,83 +321,75 @@ nav #extra {
 }
 
 #t3-main {
-  font-family: monospace;
   position: relative;
-  height: 100vh;
   display: flex;
+  height: 100vh;
+  width: 100%;
   flex-direction: row;
   justify-content: center;
+  font-family: monospace;
   overflow: hidden;
 }
-
-#t3-title1 {
+#t3-main #t3-title1 {
   position: relative;
-  width: 50VH;
   display: flex;
-  justify-content: center;
-  top: 19.2VH;
+  top: 10%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  z-index: 10;
-}
-
-#t3-title2 {
-  position: absolute;
-  width: 50VH;
-  display: flex;
   justify-content: center;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  z-index: 5;
 }
-
-.t3-title {
+#t3-main #t3-title1 .t3-title {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   font-size: 6rem;
   font-weight: bold;
 }
-
-#t3-imgContainer {
+#t3-main #t3-imgContainer {
   position: absolute;
-  top: 50VH;
-  transform: translate(0%, -50%);
-  width: 50VH;
-  height: 50VH;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  -webkit-clip-path: polygon(35% 80%, 35% 20%, 65% 20%, 65% 80%);
+          clip-path: polygon(35% 80%, 35% 20%, 65% 20%, 65% 80%);
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
 }
-#t3-imgContainer .img {
-  width: 50VH;
-  height: 50VH;
-  position: relative;
+#t3-main #t3-imgContainer #imageContainer,
+#t3-main #t3-imgContainer #imageBg {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
 }
-
-#t3-img {
-  position: relative;
-  top: 0;
-  left: 0;
-  transform: translate(-15VH, -12VW);
-  width: 80VH;
-  height: 80VH;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+#t3-main #t3-imgContainer #t3-title2 {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  top: 10%;
+  z-index: 5;
 }
-
-#t3-text {
-  width: 100VW;
-  font-size: 10rem;
+#t3-main #t3-imgContainer .t3-title {
+  font-size: 6rem;
+  font-weight: bold;
+  width: 100%;
+}
+#t3-main #t3-imgContainer #imageContainer {
+  display: flex;
+  justify-content: center;
+}
+#t3-main #t3-imgContainer #imageBg {
+  background-position: center;
+}
+#t3-main #t3-text {
   position: absolute;
   top: 50%;
   left: 3%;
+  width: 100VW;
+  font-size: 10rem;
   mix-blend-mode: multiply;
   z-index: 0;
 }

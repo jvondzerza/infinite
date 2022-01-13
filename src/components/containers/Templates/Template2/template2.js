@@ -1,10 +1,10 @@
 import { createRef, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-import { Image, Title } from '../../../blocks';
+import { Figure, Title } from '../../../blocks';
 
 const Template2 = (props) => {
-    let imageInfo = props.imgInfo;
+    let imageInfo = props.imageInfo;
     let colorScheme = props.scheme;
 
     const img = useRef();
@@ -19,8 +19,8 @@ const Template2 = (props) => {
 
     useEffect(() => {
         gsap.set(img.current, {
-            xPercent: -50,
-            yPercent: -50
+            xPercent: -35,
+            yPercent: -25
         });
 
         window.addEventListener('mousemove', (e) => {
@@ -45,13 +45,10 @@ const Template2 = (props) => {
 
     return (
         <div id={'t2-main'}>
-            <Image
+            <Figure
                 ref={img}
-                id={'t2-img'}
-                url={imageInfo.urlRegular}
-                description={imageInfo.description}
-                credit={imageInfo.credit}
-                creditUrl={imageInfo.creditUrl}
+                imageInfo={imageInfo}
+                className={"t2-figure"}
             />
             <div className={"t2-title"}>
                 {title.current.map((piece, idx) => {
