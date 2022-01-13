@@ -1,5 +1,9 @@
-import HomePage from "./HomePage/HomePage";
+import HeaderSection from "./Header/Header";
+import NavSection from "./Nav/Nav";
+import MainSection from "./Main/Main";
 
-// Any page in your app is a "view"
-
-export default HomePage;
+export { 
+    HeaderSection,
+    NavSection,
+    MainSection
+};

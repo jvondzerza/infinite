@@ -1,8 +1,11 @@
-import HomePage from "./views";
+import { HeaderSection, MainSection } from "./views";
 
 function App() {
     return (
-        <HomePage />
+        <>
+            <HeaderSection />
+            <MainSection />
+        </>
     )
 }
 
